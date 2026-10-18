@@ -1,0 +1,181 @@
+/* Variáveis de Cores (Tema Escuro Industrial) */
+:root {
+    --bg-main: #0f172a;
+    --bg-card: #1e293b;
+    --bg-belt: #020617;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: #334155;
+    
+    --color-correta: green;
+    --color-multread: #3b82f6; /* Azul */
+    --color-noread: #ef4444;   /* Vermelho */
+    --color-unknown: #f59e0b;  /* Amarelo/Laranja */
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    padding: 20px;
+}
+
+/* Cabeçalho */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.header h1 {
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.header p {
+    color: var(--text-muted);
+    margin-top: 5px;
+}
+
+/* Container Principal */
+.container {
+    max-w-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Plataformas e Grids */
+.plataforma {
+    margin-bottom: 40px;
+}
+.plataforma-titulo {
+    font-size: 22px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.grid-esteiras {
+    display: grid;
+    /* Grid responsivo: 1 coluna no celular, até 4 colunas em telas grandes */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Cartões das Esteiras */
+.card-esteira {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.card-esteira h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: var(--text-muted);
+}
+
+/* Painel de Status (Multread, No read, Unknown) */
+.stats {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+    background-color: rgba(0,0,0,0.2);
+    padding: 10px;
+    border-radius: 6px;
+}
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 600;
+}
+.stat-item .label {
+    color: var(--text-muted);
+}
+.stat-item .value {
+    padding: 2px 8px;
+    border-radius: 4px;
+    background-color: rgba(255,255,255,0.1);
+}
+.correta { color: var(--color-correta); }
+.multread { color: var(--color-multread); }
+.noread { color: var(--color-noread); }
+.unknown { color: var(--color-unknown); }
+
+/* Animação da Esteira Físca */
+.conveyor-container {
+    height: 40px;
+    background-color: var(--bg-belt);
+    border-radius: 4px;
+    border: 1px solid #000;
+    position: relative;
+    overflow: hidden;
+    margin-top: auto; /* Empurra para baixo */
+}
+
+.conveyor-belt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 15px,
+        rgba(255, 255, 255, 0.08) 15px,
+        rgba(255, 255, 255, 0.08) 30px
+    );
+    background-size: 60px 100%;
+    animation: moveBelt 1s linear infinite;
+}
+
+@keyframes moveBelt {
+    0% { background-position: 0 0; }
+    100% { background-position: 60px 0; }
+}
+
+/* Caixas passando na esteira */
+.product-box {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    left: -30px;
+    animation: moveProduct linear infinite;
+}
+
+/* Cores das caixas */
+.box-blue { background-color: #3b82f6; }
+.box-orange { background-color: #f97316; }
+.box-red { background-color: #ef4444; }
+
+@keyframes moveProduct {
+    0% { left: -30px; }
+    100% { left: 100%; }
+}
+
+/* Modificadores de velocidade das caixas */
+.speed-1 { animation-duration: 3s; }
+.speed-2 { animation-duration: 2s; }
+.speed-3 { animation-duration: 4s; }
+
+/* Modificadores de delay */
+.delay-1 { animation-delay: 0s; }
+.delay-2 { animation-delay: 1.5s; }
+.delay-3 { animation-delay: 2.2s; }
+

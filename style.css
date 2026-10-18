@@ -27,11 +27,26 @@ body {
     padding: 20px;
 }
 
+/*barra de pesquisa*/
+.home_bar {
+    
+    padding: 8px;
+    margin-top: 12px;
+}
+.home_bar a{
+    flex-wrap: initial;
+    background-color: #3b82f6;
+    padding: 8px;
+    margin-top: 12px;
+}
+
 /* Cabeçalho */
 .header {
     text-align: center;
     margin-bottom: 40px;
 }
+
+
 .header h1 {
     font-size: 28px;
     text-transform: uppercase;

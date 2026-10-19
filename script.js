@@ -15,7 +15,7 @@ function atualizarDadosEsteira(idEsteira, correta, multread, noread, unknown) {
     }
 }
 // Plataforma A
-atualizarDadosEsteira('21', 150, 3, 1, 0);
+atualizarDadosEsteira('21', 157, 3, 1, 0);
 atualizarDadosEsteira('22', 150, 3, 1, 0);
 atualizarDadosEsteira('23', 150, 3, 1, 0);
 atualizarDadosEsteira('24', 150, 3, 1, 0);

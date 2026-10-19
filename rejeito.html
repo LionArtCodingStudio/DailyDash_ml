@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Totes SP04</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Mercado livre SP04 (packing)</h1>
+        <p>Cadastro de Totes</p>
+        <div class="home_bar">
+            <a href="index.html">inicio</a>
+            <a href="rejeito.html">rejeito</a>
+            <a href="balanca.html">balanças</a>
+           
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- CADASTRO -->
+        <section class="plataforma tote-cadastro">
+            <h2 class="plataforma-titulo">Cadastrar Tote</h2>
+
+            <div class="usuario-ativo">
+                <span>Usuário ativo: <strong id="usuarioNome">—</strong></span>
+                <button type="button" id="btnTrocarUsuario" class="btn btn-sec">Trocar usuário</button>
+            </div>
+
+            <form id="formTote" class="form-tote" autocomplete="off">
+                <div class="campo">
+                    <label for="localTote">Local da tote</label>
+                    <select id="localTote" required></select>
+                </div>
+
+                <div class="campo campo-scan">
+                    <label for="numeroTote">Número da tote (scanner Zebra)</label>
+                    <input type="text" id="numeroTote" placeholder="Escaneie a tote..." autofocus>
+                </div>
+
+                <button type="submit" class="btn">Cadastrar</button>
+            </form>
+
+            <p id="mensagem" class="mensagem"></p>
+        </section>
+
+        <!-- LISTA DE TOTES -->
+        <section class="plataforma tote-lista">
+            <div class="lista-topo">
+                <h2 class="plataforma-titulo">Totes cadastradas (<span id="totalTotes">0</span>)</h2>
+                <div class="filtros">
+                    <input type="search" id="filtroBusca" placeholder="Buscar tote...">
+                    <select id="filtroLocal"></select>
+                    <button type="button" id="btnLimpar" class="btn btn-perigo">Limpar tudo</button>
+                </div>
+            </div>
+
+            <div class="tabela-wrapper">
+                <table class="tabela-totes">
+                    <thead>
+                        <tr>
+                            <th>Tote</th>
+                            <th>Local</th>
+                            <th>Cadastrado por</th>
+                            <th>Cadastro</th>
+                            <th>SLA</th>
+                            <th>Restante</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaTotes"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODAL DE USUÁRIO -->
+    <div id="modalUsuario" class="modal oculto">
+        <div class="modal-conteudo">
+            <h3>Identifique-se</h3>
+            <input type="text" id="inputUsuario" placeholder="Nome ou matrícula">
+            <button type="button" id="btnSalvarUsuario" class="btn">Entrar</button>
+        </div>
+    </div>
+
+    <script src="totes.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>produção packing SP04</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Mercado livre SP04 (packing)</h1>
+        <p>Metricas de produção bancada</p>
+        <div class="home_bar">
+            <a href="index.html">inicio</a>
+            <a href="bancadas.html">bancadas</a>
+            <a href="balanca.html">balanças</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="produção">
+            <div class="card">
+                <h2>representantes (bancada)</h2>
+                <div class="tabela-wrapper">
+                    <table class="planilha">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>RE</th>
+                                <th>Produção Total</th>
+                                <th>Prod. Líquida/h</th>
+                                <th>Prod. Efetiva/h</th>
+                                <th>Utilização</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabela-representantes">
+                            <tr><td colspan="6" class="msg">Carregando dados...</td></tr>
+                        </tbody>
+                        <tfoot id="tabela-total"></tfoot>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

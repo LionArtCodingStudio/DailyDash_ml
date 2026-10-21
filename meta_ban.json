@@ -1,0 +1,5 @@
+[
+  { "re": "123456", "producao_total": 1520, "producao_liquida_hora": 190, "producao_efetiva_hora": 175, "utilizacao": 92 },
+  { "re": "234567", "producao_total": 1310, "producao_liquida_hora": 164, "producao_efetiva_hora": 150, "utilizacao": 78 },
+  { "re": "345678", "producao_total": 980,  "producao_liquida_hora": 122, "producao_efetiva_hora": 105, "utilizacao": 55 }
+]

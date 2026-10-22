@@ -29,6 +29,7 @@ body {
 
 /*barra de pesquisa*/
 .home_bar {
+    background-color: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 4px;
     padding: 8px;
